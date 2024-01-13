@@ -1,32 +1,458 @@
-<html>
-<head>
-<style>
-.closed-banner {
-  background-color: #ffcc00;
-  color: black;
-  text-align: center;
-  padding: 10px;
-  font-size: 20px;
-}
-</style>
-<style type="text/css" data-tag-name="trix-editor">
-trix-editor {
+<html><input type="hidden" id="__yoroi_connector_api_injected_type" value="prod"><head><style type="text/css" data-tag-name="trix-editor">trix-editor {
   display: block;
 }
-... (additional styles here)
-</style>
-<title>EA Work Club</title>
-<meta name="description" content="High-impact jobs and side projects for effective altruists.">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta property="og:image" content="http://www.eawork.club/logo.jpg">
-</head>
-<body>
-   <div class="closed-banner">
-     <p>This site is closed for business. Thank you for your support!</p>
-   </div>
-   <div class="container-fluid extremity" id="navbar">
-   ... (remaining content of old_index.html with scripts and forms removed)
-   </div>
-</body>
-</html>
+
+trix-editor:empty:not(:focus)::before {
+  content: attr(placeholder);
+  color: graytext;
+  cursor: text;
+  pointer-events: none;
+}
+
+trix-editor a[contenteditable=false] {
+  cursor: text;
+}
+
+trix-editor img {
+  max-width: 100%;
+  height: auto;
+}
+
+trix-editor [data-trix-attachment] figcaption textarea {
+  resize: none;
+}
+
+trix-editor [data-trix-attachment] figcaption textarea.trix-autoresize-clone {
+  position: absolute;
+  left: -9999px;
+  max-height: 0px;
+}
+
+trix-editor [data-trix-attachment] figcaption[data-trix-placeholder]:empty::before {
+  content: attr(data-trix-placeholder);
+  color: graytext;
+}
+
+trix-editor [data-trix-cursor-target] {
+  display: inline-block !important;
+  width: 1px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
+trix-editor [data-trix-cursor-target=left] {
+  vertical-align: top !important;
+  margin-left: -1px !important;
+}
+
+trix-editor [data-trix-cursor-target=right] {
+  vertical-align: bottom !important;
+  margin-right: -1px !important;
+}</style><style type="text/css" data-tag-name="trix-toolbar">trix-toolbar {
+  display: block;
+}
+
+trix-toolbar {
+  white-space: nowrap;
+}
+
+trix-toolbar [data-trix-dialog] {
+  display: none;
+}
+
+trix-toolbar [data-trix-dialog][data-trix-active] {
+  display: block;
+}
+
+trix-toolbar [data-trix-dialog] [data-trix-validate]:invalid {
+  background-color: #ffdddd;
+}</style>
+    <title>EA Work Club</title>
+    <meta name="description" content="High-impact jobs and side projects for effective altruists.">
+
+    <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="kEM+SLVIU5kgFgWOHtz/5+3KNKqxd1+aCQZyhojjLi6zo+RnrYPLkznULm8o2Kr0vOReafCfyzWyQ5t+9p3smw==">
+    <script type="text/javascript" async="" src="https://widget.intercom.io/widget/nkxgpw8n"></script><script src="/assets/application-be71089bcb37fccfb484b76385aac07687a8d40ddb26510c1a1525f2eba53274.js" data-turbolinks-track="reload"></script>
+    <link rel="stylesheet" media="all" href="/assets/application-8466f6a78bb8fcdd34f154427ddec791783d04cc0f61eb1174d3b7a86c64608f.css" data-turbolinks-track="reload">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta property="og:image" content="http://www.eawork.club/logo.jpg">
+  <script type="text/javascript">(async function() { class ReadwiseElement extends HTMLElement {
+      constructor() {
+        super();
+
+        [...this.children].forEach((child) => this.appendChild(child));
+      }
+    }
+
+    try {
+      customElements.define(
+        "readwise-tooltip-container",
+        class ReadwiseTooltipContainer extends ReadwiseElement {},
+        {"extends":"div"},
+      );
+    } catch (e) {
+      if(!e.message.includes("already been defined")
+        && !e.message.includes("already been used with this registry")) {
+        console.error("Failed to define custom element", e);
+        throw e;
+      }
+    } })()</script><script type="text/javascript">document.body.appendChild(document.createElement("readwise-tooltip-container"));</script><script type="text/javascript">(async function() { class ReadwiseElement extends HTMLElement {
+      constructor() {
+        super();
+
+        [...this.children].forEach((child) => this.appendChild(child));
+      }
+    }
+
+    try {
+      customElements.define(
+        "rw-highlight",
+        class ReadwiseHighlight extends ReadwiseElement {},
+        {"extends":"mark"},
+      );
+    } catch (e) {
+      if(!e.message.includes("already been defined")
+        && !e.message.includes("already been used with this registry")) {
+        console.error("Failed to define custom element", e);
+        throw e;
+      }
+    } })()</script></head>
+
+  <body>
+
+    <div class="container-fluid extremity" id="navbar">
+  <nav class="navbar navbar-expand-sm">
+    <div class="navbar-collapse">
+      <ul class="navbar-nav ml-auto mr-auto">
+        <li class="nav-item active">
+          <h4 class="mt-1">
+            EA Work Club is now closed. So long!
+          </h4>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+
+      <div id="masthead" class="container-fluid white-on-blue">
+    <div>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <h1 class="display-3">EA Work Club</h1>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <h2>High-impact jobs and side projects for effective altruists.<sup><span class="text-muted"><a href="/about">?</a></span></sup></h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="masthead-second" class="masthead-second container-fluid">
+    <div class="row justify-content-center ">
+      <div class="col-md-8">
+          <a href="/categories/1" class="badge badge-pill badge-dark">Other</a>
+          <a href="/categories/2" class="badge badge-pill badge-dark">Global Poverty</a>
+          <a href="/categories/6" class="badge badge-pill badge-dark">Rationality</a>
+          <a href="/categories/7" class="badge badge-pill badge-dark">Cause Prioritisation</a>
+          <a href="/categories/5" class="badge badge-pill badge-dark">Animal Welfare</a>
+          <a href="/categories/9" class="badge badge-pill badge-dark">Environmentalism</a>
+          <a href="/categories/8" class="badge badge-pill badge-dark">Politics/Policy</a>
+          <a href="/categories/4" class="badge badge-pill badge-dark">Community-building</a>
+          <a href="/categories/10" class="badge badge-pill badge-dark">Long-Term Future</a>
+          <a href="/categories/3" class="badge badge-pill badge-dark">AI</a>
+        <a href="/jobs?remote=true" class="badge badge-pill badge-light">Remote Only</a>
+        <a href="/categories" class="badge badge-pill badge-info">Everything</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="masthead-third" class="masthead-third container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <div class="form-group">
+          <label>Search</label>
+          <form action="/search" class="input-group input-group-sm">
+            <input type="text" name="query" class="form-control" aria-describedby="inputGroup-sizing-sm" placeholder="Type a search query, then hit Enter">
+          </form>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label>Find jobs near...</label>
+          <form action="/locationsearch" class="input-group input-group-sm">
+            <input type="text" name="query" class="form-control" aria-describedby="inputGroup-sizing-sm" placeholder="London, UK">
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div id="listings-main" class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-lg-4 col-md-8">
+        <h2>Latest projects</h2>
+        <div style="padding-top: 1em;">
+          <div class="alert alert-secondary" role="alert">
+            Coming soon. <a href="/projects/new" class="alert-link">Submit your project now</a> or <a href="/projects/new" class="alert-link">subscribe for updates</a>!
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-8">
+        <h2>Latest jobs</h2>
+          <p>Nothing yet. Check back soon.</p>
+      </div>
+    </div>
+  </div>
+
+
+    <div class="container-fluid extremity">
+  <nav class="navbar navbar-expand-sm">
+    <div class="navbar-collapse justify-content-center">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link footer-link" href="mailto:henry@henrystanley.com">Contact Us</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link footer-link" href="http://github.com/henryaj/ea-work-club">Source</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link footer-link" href="/privacy">Privacy Policy</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+    <script>
+      window.setTimeout(function() { $("#flash-alert").fadeOut(); }, 5000)
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+    </script>
+  <script id="IntercomSettingsScriptTag">
+//<![CDATA[
+window.intercomSettings = {"app_id":"nkxgpw8n"};(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/nkxgpw8n';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}};})()
+//]]>
+</script>
+
+
+<readwise-tooltip-container></readwise-tooltip-container><iframe id="intercom-frame" style="position: absolute !important; opacity: 0 !important; width: 1px !important; height: 1px !important; top: 0 !important; left: 0 !important; border: none !important; display: block !important; z-index: -1 !important; pointer-events: none;" aria-hidden="true" tabindex="-1" title="Intercom"></iframe><div class="intercom-lightweight-app"><div class="intercom-lightweight-app-launcher intercom-launcher" role="button" tabindex="0" aria-label="Open Intercom Messenger" aria-live="polite"><div class="intercom-lightweight-app-launcher-icon intercom-lightweight-app-launcher-icon-open"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 32"><path d="M28 32s-4.714-1.855-8.527-3.34H3.437C1.54 28.66 0 27.026 0 25.013V3.644C0 1.633 1.54 0 3.437 0h21.125c1.898 0 3.437 1.632 3.437 3.645v18.404H28V32zm-4.139-11.982a.88.88 0 00-1.292-.105c-.03.026-3.015 2.681-8.57 2.681-5.486 0-8.517-2.636-8.571-2.684a.88.88 0 00-1.29.107 1.01 1.01 0 00-.219.708.992.992 0 00.318.664c.142.128 3.537 3.15 9.762 3.15 6.226 0 9.621-3.022 9.763-3.15a.992.992 0 00.317-.664 1.01 1.01 0 00-.218-.707z"></path></svg></div><div class="intercom-lightweight-app-launcher-icon intercom-lightweight-app-launcher-icon-minimize"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M18.601 8.39897C18.269 8.06702 17.7309 8.06702 17.3989 8.39897L12 13.7979L6.60099 8.39897C6.26904 8.06702 5.73086 8.06702 5.39891 8.39897C5.06696 8.73091 5.06696 9.2691 5.39891 9.60105L11.3989 15.601C11.7309 15.933 12.269 15.933 12.601 15.601L18.601 9.60105C18.9329 9.2691 18.9329 8.73091 18.601 8.39897Z" fill="white"></path>
+</svg>
+</div></div><style id="intercom-lightweight-app-style" type="text/css">
+  @keyframes intercom-lightweight-app-launcher {
+    from {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes intercom-lightweight-app-gradient {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes intercom-lightweight-app-messenger {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    40% {
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .intercom-lightweight-app {
+    position: fixed;
+    z-index: 2147483001;
+    width: 0;
+    height: 0;
+    font-family: intercom-font, "Helvetica Neue", "Apple Color Emoji", Helvetica, Arial, sans-serif;
+  }
+
+  .intercom-lightweight-app-gradient {
+    position: fixed;
+    z-index: 2147483002;
+    width: 500px;
+    height: 500px;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    background: radial-gradient(
+      ellipse at bottom right,
+      rgba(29, 39, 54, 0.16) 0%,
+      rgba(29, 39, 54, 0) 72%);
+    animation: intercom-lightweight-app-gradient 200ms ease-out;
+  }
+
+  .intercom-lightweight-app-launcher {
+    position: fixed;
+    z-index: 2147483003;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none;
+    bottom: 20px;
+    right: 20px;
+    max-width: 48px;
+    width: 48px;
+    max-height: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #00879D;
+    cursor: pointer;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.06), 0 2px 32px 0 rgba(0, 0, 0, 0.16);
+    transition: transform 167ms cubic-bezier(0.33, 0.00, 0.00, 1.00);
+    box-sizing: content-box;
+  }
+
+
+  .intercom-lightweight-app-launcher:hover {
+    transition: transform 250ms cubic-bezier(0.33, 0.00, 0.00, 1.00);
+    transform: scale(1.1)
+  }
+
+  .intercom-lightweight-app-launcher:active {
+    transform: scale(0.85);
+    transition: transform 134ms cubic-bezier(0.45, 0, 0.2, 1);
+  }
+
+
+  .intercom-lightweight-app-launcher:focus {
+    outline: none;
+
+    
+  }
+
+  .intercom-lightweight-app-launcher-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 48px;
+    height: 48px;
+    transition: transform 100ms linear, opacity 80ms linear;
+  }
+
+  .intercom-lightweight-app-launcher-icon-open {
+    
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+      
+  }
+
+  .intercom-lightweight-app-launcher-icon-open svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .intercom-lightweight-app-launcher-icon-open svg path {
+    fill: rgb(255, 255, 255);
+  }
+
+  .intercom-lightweight-app-launcher-icon-self-serve {
+    
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+      
+  }
+
+  .intercom-lightweight-app-launcher-icon-self-serve svg {
+    height: 44px;
+  }
+
+  .intercom-lightweight-app-launcher-icon-self-serve svg path {
+    fill: rgb(255, 255, 255);
+  }
+
+  .intercom-lightweight-app-launcher-custom-icon-open {
+    max-height: 24px;
+    max-width: 24px;
+
+    
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+      
+  }
+
+  .intercom-lightweight-app-launcher-icon-minimize {
+    
+        opacity: 0;
+        transform: rotate(-60deg) scale(0);
+      
+  }
+
+  .intercom-lightweight-app-launcher-icon-minimize svg path {
+    fill: rgb(255, 255, 255);
+  }
+
+  .intercom-lightweight-app-messenger {
+    position: fixed;
+    z-index: 2147483003;
+    overflow: hidden;
+    background-color: white;
+    animation: intercom-lightweight-app-messenger 250ms cubic-bezier(0, 1, 1, 1);
+    transform-origin: bottom right;
+
+    
+        width: 400px;
+        height: calc(100% - 104px);
+        max-height: 704px;
+        min-height: 250px;
+        right: 20px;
+        bottom: 84px;
+        box-shadow: 0 5px 40px rgba(0,0,0,0.16);
+      
+
+    border-radius: 16px;
+  }
+
+  .intercom-lightweight-app-messenger-header {
+    height: 64px;
+    border-bottom: none;
+    background: #00879D
+
+    
+  }
+
+  .intercom-lightweight-app-messenger-footer{
+    position:absolute;
+    bottom:0;
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    font-size: 14px;
+    line-height: 21px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+    
+  }
+
+  @media print {
+    .intercom-lightweight-app {
+      display: none;
+    }
+  }
+</style></div></body></html>
